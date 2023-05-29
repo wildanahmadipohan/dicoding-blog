@@ -329,9 +329,11 @@ footer a {
 
   .nav__list {
     transform: translate(0, 0);
+    transition: none;
   }
 
   .nav__item {
+    text-align: center;
     display: inline-block;
   }
 
