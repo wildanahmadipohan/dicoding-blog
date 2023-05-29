@@ -135,6 +135,10 @@ main {
 /*
  * headline
  */
+.headline {
+  display: grid;
+}
+
 .headline__figure {
   width: 100%;
   float: left;
@@ -213,6 +217,9 @@ main {
 .posts {
   margin: 32px auto auto;
   text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.75rem;
 }
 
 /*
@@ -293,4 +300,24 @@ footer li {
 footer a {
   text-decoration: none;
   color: #fff
+}
+
+/* media queries / breakpoint */
+
+/* Medium */
+@media screen and (min-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large */
+@media screen and (min-width: 992px) {
+  .headline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
